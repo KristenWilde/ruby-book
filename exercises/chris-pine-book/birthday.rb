@@ -2,28 +2,31 @@
 # It asks the user to type in a name, then tells when the person's next birthday will be
 # and how old they'll be.
 
-def next_birthday person 
-  day = birthday_hash[person] #.strftime("%m/%d")
-  day
-end
-
 birthday_hash = Hash.new
-filename = 'birthday.txt'
-birthday_string = File.read filename
-
-# Build the birthday_hash:
-birthday_string.each_line do |line|
+File.read('birthday.txt').each_line do |line| #Go method chaining.
   mini_array = line.chomp.split  #Makes a new little array containing strings. Perfect! I can use index numbers!
   name = mini_array[0] + " " + mini_array[1].chomp(',')
   birthdate = Time.local(mini_array[4], mini_array[2], mini_array[3].chomp(''))
   birthday_hash[name] = birthdate
 end
 
-#time = Time.new
 
 puts "Whose birthday would you like to know? Enter their first and last name, please."
 person = gets.chomp
+bday = birthday_hash[person] # bday stores the year they were born.
+if bday == nil
+  puts "Sorry, I don't know that one. Make sure you enter the whole first and last name, no nicknames."
+  person = gets.chomp
+end
+
+# The next few lines I copied out of the book.
+now = Time.new
+age = now.year - bday.year
+
+if now.month > bday.month || (now.month == bday.month && now.day > bday.day)
+  age += 1
+end
 
 puts 
-puts person + "'s birthday is " + next_birthday(person) + "!"
-
+puts person + "'s birthday is " + bday.strftime("%B %-d") + "."
+puts person + " will be turning " + age.to_s + "!"
