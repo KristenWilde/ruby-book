@@ -2,6 +2,8 @@
 # It asks the user to type in a name, then tells when the person's next birthday will be
 # and how old they'll be.
 
+
+
 birthday_hash = Hash.new
 File.read('birthday.txt').each_line do |line| #Go method chaining.
   mini_array = line.chomp.split  #Makes a new little array containing strings. Perfect! I can use index numbers!
@@ -10,13 +12,14 @@ File.read('birthday.txt').each_line do |line| #Go method chaining.
   birthday_hash[name] = birthdate
 end
 
-
 puts "Whose birthday would you like to know? Enter their first and last name, please."
-person = gets.chomp
+
+person=gets.chomp
+
 bday = birthday_hash[person] # bday stores the year they were born.
+
 if bday == nil
-  puts "Sorry, I don't know that one. Make sure you enter the whole first and last name, no nicknames."
-  person = gets.chomp
+  puts 'I don\'t know that one!'
 end
 
 # The next few lines I copied out of the book.
