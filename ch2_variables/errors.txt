@@ -1,0 +1,11 @@
+Exercise 5:
+
+In the first program, the variable x is defined before the block, so it is available throughout the program. Within the block, it is incremented three times and the answer is 3.
+
+In the second program, the variable y belongs only to the scope of the block, so it can not be accessed at the end of the program and an error is thrown.
+
+
+Exercise 6:
+
+This error message tells the programmer that on line 3, there is a variable "shoes" that can not be found in the scope where it is being used. It may be a 
+spelling mistake, or maybe the variable should be defined in a different place. Perhaps it should be a different type of variable (global, instance, class, or constant).
