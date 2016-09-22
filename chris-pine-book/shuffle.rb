@@ -6,12 +6,12 @@ class Array
   
     current = self
     shuf = Array.new
-    temp = Array.new
-    y = 0
       
     while current.length > 0
 
+      temp = Array.new
       x = rand(current.length)
+      y = 0
         
       current.each do |element|
         if y == x
@@ -23,7 +23,6 @@ class Array
       end
     
       current = temp
-      temp = Array.new
     
     end
     
