@@ -1,0 +1,2 @@
+Another line
+Here we areWriting to files in Ruby is simple.
