@@ -1,0 +1,36 @@
+Exercise 2:
+
+  1. 2
+  2. nil
+  3. nil      Oops. Correct answer is "Joe". Unlike puts, p returns the value of whatever it printed out. Can be string or other class of object.
+  4. "four"
+  5. error    Oops. I thought the computer would be thrown off by this syntax. Instead it just returned nil.
+  
+
+Exercise 4:
+
+I think it will return either the value of the expression evaluated just above the line "return", which would be
+"Yipeee!!!", or it may return nil because there is nothing following the keyword "return".
+  
+I tested; it returns nil and prints nothing on the screen.
+
+
+Exercise 5:
+
+-----
+
+def scream(words)
+  words = words + "!!!!"
+  puts words
+end
+
+scream("Yippeee")
+
+-----
+
+Prints "Yippeee!!!!" and return value is nil (as the result of puts).
+
+
+Exercise 6:
+
+The method 'calculate_product' in line 1 expected 2 arguments but only received 1.
