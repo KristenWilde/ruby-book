@@ -4,8 +4,16 @@
 # which returns the new array.
 
 x = [1, 2, 3, 4, 5]
-new = x.each do |a|
+
+x.each do |a|
   a = x.unshift(x.pop + 1)
 end
+p x
 
-p new
+# After reading chapter 6, here is another way to do this, without using .each. 
+
+y = [1, 2, 3, 4, 5]
+p y.map { |a| a += 1 } 
+
+# However, .map does not mutate the caller.
+p y # prints the original array y.
