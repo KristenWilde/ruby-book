@@ -1,0 +1,20 @@
+My answers for exercises in chapter 4, Flow Control
+
+1. 
+
+  1. true   ! Ok, my mental calculation was off.
+  2. false
+  3. true   ! Ok, true and an interger are not equivalent values.
+  4. true
+  5. true
+  
+
+4. 
+
+  1. FALSE
+  2. Did you get it right?
+  3. Alright now!
+  
+
+6.  The program should have the "end" keyword twice. Once for the if/else block, and one
+for the method definition. Just add another "end" after the if/else block.
