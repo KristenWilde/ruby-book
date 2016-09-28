@@ -15,5 +15,5 @@ p x
 y = [1, 2, 3, 4, 5]
 p y.map { |a| a += 1 } 
 
-# However, .map does not mutate the caller.
+# However, like .each, .map does not mutate the caller.
 p y # prints the original array y.

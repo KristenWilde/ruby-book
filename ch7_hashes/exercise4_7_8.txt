@@ -1,0 +1,7 @@
+4. person[:name]
+
+7. x has a different meaning in the two hashes. With a colon, x: is a new symbol being created.
+    x in the second hash refers to the variable x, which points to the string "hi there".
+    
+8. B
+
