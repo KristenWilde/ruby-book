@@ -1,0 +1,95 @@
+Notes on chapter 9
+
+
+Regexp (regular expression)
+
+
+- An object used to match patterns in strings. 
+- Delimited with / /
+- uses the match operator =~ to return the index of characters in a string 
+
+       /s/ =~ "hamster"      #=> 3 
+       /v/ =~ "hamster"      #=> nil
+
+- .match method returns a MatchData object, or nil if there's no match.
+
+       /m/.match('hamster')    #=> <MatchData "m">
+
+- the MatchData object can act as a boolean value in programs.
+
+      if /e/.match('hamster')
+        puts "Hamster has an e"
+      end
+
+-------------------------------------
+
+Ruby Standard Classes:
+
+
+Math is a library/module that can be used for square roots, PI, logarithms, trig functions, and more.
+
+      Math.sqrt(400)    #=> 20.0
+
+Time is a built-in class that contains time information.
+
+      t = Time.new(2016, 9, 28)
+      => 2016-09-28 00:00:00 +0000 
+
+There are lots of great methods for Time including .localtime("-04:00") to change to my time zone,
+.strftime to create a string with a certain time format, .local to get the current time, and 
+.hour to return the hour of a time object as an interger.
+
+------------------------------------
+
+Variables as Pointers
+
+
+It's important to know that variables don't store values; they point to a space in memory.
+If a method mutates the caller, any variables that pointed to it could also be affected 
+depending on their scope.
+
+------------------------------------
+
+Blocks and Procs
+
+
+A block can be used as an argument in a method. It should be the last argument passed in,
+using a placeholder that begins with &.
+
+A proc is a type of object that holds a block. It can be defined (with arguments if desired), 
+stored with a variable, passed around (including into methods), and called with the method .call.
+
+      talk = Proc.new { |a| puts "I am talking to #{a}." }
+      talk.call "Bob"
+      => "I am talking to Bob.
+
+---------------------------------
+
+Exception Handling
+
+
+The Exception class handles errors with the reserved words begin, rescue, end.
+
+      begin # some dangerous operation
+      rescue # what to do if the operation fails
+      end
+      
+Or inline:
+
+    0.each { |t| puts t } rescue puts "Can't do that!"
+
+Or to rescue known errors likely to happen:
+
+    begin blah blah
+    rescue ZeroDivisionError => e  # saving the error to a variable
+      puts e.message               # calling the message method that the ZeroDivisionError object has.
+    end  
+
+-------------------------------
+
+Exceptions and Stack Traces
+
+
+Exceptions, or errors, happen. In the error messages, numbers referring to lines of the program 
+can help trace the problem.
+      
