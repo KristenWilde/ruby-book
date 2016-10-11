@@ -1,0 +1,40 @@
+Regular Expressions:
+
+/ Pattern start and end
+| or
+[ ] character set such as [aeiou] or range, such as [a-z]
++ repeats the previous character or range one or more times
+* the previous character or set occurs 0 or more times.
+
+modifiers after the pattern:
+i means case insensitive
+g global modifier - matches every instance in the string, not just the first.
+m multiline string. ^ and $ anchors will apply to each line, not the entire string.
+
+. wildcard - any character except newline \
+( ) groups characters together and captures (returns) the groups
+(?: means the grouping is only for evaluating, not to be returned.
+? the preceeding character or group is optional
+^ "not" when placed within a character set
+   or as an anchor, means start matching the pattern at the beginning of the string
+$ anchor means stop matching the pattern at the end of the string
+\b anchor to indicate the beginning or end of a word
+\w any wordlike character (alphanumeric or _ )
+\d any digit 0-9
+\s whitespace
+\W any non-wordlike character
+\D any character that is not a digit
+\S anything except whitespace
+, literal comma
+\. literal period
+\+ literal "+"
+{2} interval expression matches the preceeding character/range exactly two times
+{1, 3} matches minimum of 1 time, maximum of 3.
+
+
+
+
+
+
+
+
