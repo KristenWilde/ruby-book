@@ -1,0 +1,73 @@
+1.
+
+"xyz".upcase
+
+2.
+
+%w(a b c d e).insert(3, 5, 6, 7)
+#insert inserts any number of given values at the given index. 
+
+0 or more objects is written as obj... , *obj , or [obj]*
+
+3.
+
+.split without arguments splits on spaces, so 
+["abc", "def", "ghi,jkl", "mno", "pqr,stu", "vwx", "yz"]
+
+.split(',') splits at the commas, preserving spaces, so an array of three strings:
+["abc def ghi", "jkl mno pqr", "stu vwx yz"]
+
+.split(',', 2) has an optional argument, the limit of total items:
+["abc def ghi", "jkl mno pqr,stu vwx yz"]
+
+In the docs:
+split(pattern=nil, [limit]) → anArray
+
+pattern has a default value, nil.
+The brackets around limit mean it's optional and there's no default value.
+
+4. Optional parameters with defaults. Got it. I think I'll stick with the Time 
+module unless I come across a need for Date.
+
+5.
+
+a.bsearch { |item| item > 8 }
+
+6.
+
+The docs have three signatures for fetch depending on the parameters:
+
+fetch(index) → obj
+fetch(index, default) → obj
+fetch(index) { |index| block } → obj
+
+Tries to return an element at index. If only one argument, throws an error.
+If two, the second argument becomes a default that is returned when the element 
+is not found. Or, an optional block can tell what to do with the index if it is not found.
+
+7.
+
+5
+8
+
+in 5.step(to: 10, by: 3) { |value| puts value }
+to:limit and by:step are keyword arguments, ie named arguments. Order can be reversed.
+
+8.
+
+s.public_methods.inspect prints a list of all the public methods available 
+to a string object and its parent objects.
+
+s.public_methods(false).inspect
+
+9.
+
+puts a.min(2)
+
+.min belongs to the Enumerable module, a min-in which provides functionality to 
+iterate through collections such as Array, Hash, Range. 
+
+10.
+
+Found it only after I read the solution.
+
