@@ -38,7 +38,7 @@ puts search_result
       # other stuff using options if present
     end
   
-  # to call:
+  # to call: (option keys can be in any order! or leave them out!)
 
   tweet("Practicing Ruby", 
     lat: 28.55,

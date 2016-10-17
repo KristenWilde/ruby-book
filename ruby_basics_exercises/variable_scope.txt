@@ -1,0 +1,47 @@
+1.
+
+7
+
+2.
+
+7
+
+3.
+
+Oops. Unlike loops which can access the parent scope, a method is self-contained
+with respect to local variables. The only way it can access is to pass it in.
+
+4.
+
+"Xyzzy" Oops, no. Xy-zy
+
+- Numbers are immutable; re-assignment makes a new object.
+- Strings are mutable. []= is a mutating method which modifies the original string.
+
+5.
+
+Xyzzy
+
+- Assignment creates a new object.
+
+6.
+
+Error
+
+7.
+
+3
+
+8.
+
+Error
+
+9.
+
+7
+
+block variable shadows outer local variable.
+
+10.
+
+Error

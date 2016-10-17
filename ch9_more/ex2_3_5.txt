@@ -1,0 +1,20 @@
+2.  
+    My hypothesis:
+
+    "Hello from inside the execute method!" 
+    => execute
+    
+    It actually printed nothing, because the block was nevr activated with .call
+    It did return a Proc object: => #<Proc:0x00000000d8cd68@(irb):5> 
+    
+
+
+3.  Exception handling solves the problem of errors that come up when working with real-world 
+    users and files. It makes it possible for the program to still work.
+    
+    
+5.  The message tells us that something went wrong when line 5 tried to reference line 1. 
+    The computer thought execute was being called with 0 arguments when it expected 1. 
+    The problem is that for a block to be accepted as an argument, the method definition needs 
+    "&" before the local variable for the block.
+    

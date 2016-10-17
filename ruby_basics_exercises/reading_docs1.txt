@@ -1,0 +1,45 @@
+5. 
+
+Large numbers can be written with underscores anywhere in the number.
+
+6.
+
+:Kristen
+
+7.
+
+Non-default positional values are assigned first, leaving the middle for a default. 
+[4, 5, 3, 6]
+
+8. check.
+
+9.
+
+.rjust(lengthwithpadding, optionalfillerstringtorepeat)
+"hello".rjust(20) #=> "               hello"
+"hello".rjust(20, '_') #=> "_______________hello"
+
+10.
+
+File::path is called on the class File
+File.path("/dev/null")          #=> "/dev/null"
+
+File#path is called on a file instance
+f = File.new('my-file.txt')
+puts f.path
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
